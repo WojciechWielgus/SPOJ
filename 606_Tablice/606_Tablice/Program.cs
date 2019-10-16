@@ -14,11 +14,15 @@ namespace _606_Tablice
                 string[] reverse_data_table = new string[data_table.Length - 1];
                 for (int j = 0; j < int.Parse(data_table[0]); j++)
                 {
-                    reverse_data_table[j] = data_table[data_table.Length - j];
+                    reverse_data_table[j] = data_table[data_table.Length - j - 1];
                 }
-
-                Console.WriteLine(reverse_data_table);
-                
+                string output = "";
+                for (int j = 0; j < reverse_data_table.Length; j++)
+                {
+                    if (j != 0) output += " "; 
+                    output += reverse_data_table[j];                   
+                }
+                Console.WriteLine(output);               
             }
         }
     }
