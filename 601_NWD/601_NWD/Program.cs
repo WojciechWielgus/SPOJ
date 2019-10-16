@@ -22,9 +22,9 @@ namespace _601_NWD
 
         static int NWD(int a, int b)
         {
-            if(a >= b) for (int i = b; i > 0; i--) if (a % i == 0 && b % i == 0) return i;
-            if (b >= a) for (int i = a; i > 0; i--) if (a % i == 0 && b % i == 0) return i;
-            return 1;
+            if (b != 0)
+                return NWD(b, a % b);
+            return a;
         }
     }
 }
