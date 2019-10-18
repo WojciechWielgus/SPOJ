@@ -31,7 +31,7 @@ namespace _997_Kalkulator
                     case "/":
                         Console.WriteLine(a / b);
                         break;
-                    case "%":
+                    default:
                         Console.WriteLine(a % b);
                         break;
                 }
