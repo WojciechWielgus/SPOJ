@@ -9,12 +9,14 @@ namespace _969_Równanie_kwadratowe
         static void Main(string[] args)
         {
             //Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
-            string[] data;
-            while((data = Console.ReadLine().Split(' ')) != null)
+            string data;
+            string[] tab;
+            while((data = Console.ReadLine()) != null)
             {
-                double a = double.Parse(data[0], CultureInfo.InvariantCulture);
-                double b = double.Parse(data[1], CultureInfo.InvariantCulture);
-                double c = double.Parse(data[2], CultureInfo.InvariantCulture);
+                tab = data.Split(' ');
+                double a = double.Parse(tab[0], CultureInfo.InvariantCulture);
+                double b = double.Parse(tab[1], CultureInfo.InvariantCulture);
+                double c = double.Parse(tab[2], CultureInfo.InvariantCulture);
 
                 Console.WriteLine(NumbersOfRoots(a, b, c));                
             }
